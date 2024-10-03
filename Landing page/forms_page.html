@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <header class="custom-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="Index.html" class="navbar-brand text-white">Curso Me Deixe Milionário Express</a>
+            <a href="Login_page.html" class="btn btn-plan">Criar Conta / Fazer Login</a>
+        </div>
+    </header>
+
+    <div class="container py-5" style="margin: 5%; margin-top: 0px;">
+        <h2 class="mb-4">Cadastro de Compra de Curso</h2>
+        <form>
+            <!-- Nome Completo -->
+            <div class="mb-3">
+                <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo"
+                    required>
+            </div>
+
+            <!-- E-mail -->
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <!-- Telefone -->
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="number" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+
+            <!-- Curso -->
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso</label>
+                <select class="form-select" id="curso" required>
+                    <option value="" disabled selected>Selecione o curso</option>
+                    <option value="curso1">Curso de Como Ficar Rico</option>
+                    <option value="curso2">Curso de Como Vender Cursos</option>
+                    <option value="curso3">Curso de Como Me Deixar Rico</option>
+                </select>
+            </div>
+
+            <!-- Forma de Pagamento -->
+            <div class="mb-3">
+                <label for="formaPagamento" class="form-label">Forma de Pagamento</label>
+                <select class="form-select" id="formaPagamento" required>
+                    <option value="" disabled selected>Selecione a forma de pagamento</option>
+                    <option value="cartaoCredito">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">PIX</option>
+                </select>
+            </div>
+
+            <!-- Número do Cartão (se pagamento for Cartão de Crédito) -->
+            <div class="mb-3" id="numeroCartaoDiv" style="display: none;">
+                <label for="numeroCartao" class="form-label">Número do Cartão</label>
+                <input type="text" class="form-control" id="numeroCartao" placeholder="Digite o número do cartão">
+            </div>
+
+            <!-- Botão de Enviar -->
+            <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+        </form>
+    </div>
+
+    <script>
+        // Exibir campo de número do cartão se a opção "Cartão de Crédito" for selecionada
+        document.getElementById('formaPagamento').addEventListener('change', function () {
+            var cartaoDiv = document.getElementById('numeroCartaoDiv');
+            if (this.value === 'cartaoCredito') {
+                cartaoDiv.style.display = 'block';
+                document.getElementById('numeroCartao').setAttribute('required', 'required');
+            } else {
+                cartaoDiv.style.display = 'none';
+                document.getElementById('numeroCartao').removeAttribute('required');
+            }
+        });
+    </script>
+
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Cursos de Sucesso</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Como Ficar Rico</a></li>
+                        <li><a href="#">Como Vender Cursos</a></li>
+                        <li><a href="#">Como Alavancar Seu Negócio</a></li>
+                        <li><a href="#">Investimentos Inteligentes</a></li>
+                        <li><a href="#">Mentalidade de Abundância</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Estratégias de Riqueza</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Gestão de Dinheiro</a></li>
+                        <li><a href="#">Marketing para Vendas</a></li>
+                        <li><a href="#">Escalando Negócios</a></li>
+                        <li><a href="#">Fontes de Renda Múltiplas</a></li>
+                        <li><a href="#">Construindo seu Império</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Siga-nos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>© 2024 Curso Milionário Express. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+/* Cores */
+:root {
+    --cinza-escuro: #1E1E1E;
+    --cinza-medio: #2D2D2D;
+    --cinza-claro: #3C3C3C;
+    --cinza-prata: #A9A9A9;
+}
+
+/* Header */
+.custom-header {
+    background-color: var(--cinza-escuro);
+    padding: 10px 0;
+}
+
+.custom-header a {
+    color: white;
+}
+
+
+/*corpo*/
+body {
+    background-color: var(--cinza-medio);
+    color: var(--cinza-prata);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--cinza-escuro);
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    /* Faz o footer ocupar todo o espaço disponível */
+    width: 100%;
+    /* Garante que o footer ocupe toda a largura */
+}
+
+.footer a {
+    color: var(--cinza-prata);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: var(--cinza-prata);
+}
+
+
+/*titulos e paragrafos*/
+h1{
+    color: var(--cinza-prata);
+}
+h5,.card-title{
+    color: white}
+
+
+p {
+    color: var(--cinza-prata);
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* cards*/
+.card {
+    background-color: #2D2D2D;
+    border: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-title,.card-text {
+    color: var(--cinza-prata);
+}
+
+.card-body {
+    background-color: var(--cinza-claro);
+}
+
+.nav-link {
+    color: var(--cinza-prata);
+}
+
+
+/* Botões */
+.btn {
+    background-color: var(--cinza-claro);
+    color: white;
+    border: 20px white;
+    border-radius: 10px;
+    
+}
+.sub-btn{
+    background-color: gray;
+    color: white;
+    border: 20px white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.btn-plan {
+    background-color: grey;
+    color: white;
+}
+
+.btn:hover {
+    background-color: var(--cinza-prata);
+    color:white;
+}
+
+.btn-outline-light {
+    border-color: var(--cinza-escuro);
+    color: var(--cinza-prata);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--cinza-claro);
+    color: #1E1E1E;
+}
+
+
+/* Formulários */
+input {
+    border-radius: 5px;
+    border: 1px solid var(--cinza-prata);
+}
+
+
+/* Imagens */
+.img-fluid {
+    border-radius: 8px;
+}
+
+.card-img-top{ 
+    width: auto; 
+    height: 300px;
+
+}                                                                                           
